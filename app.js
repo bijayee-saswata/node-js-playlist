@@ -1,4 +1,5 @@
 var express = require('express');
+var bodyParser = require('body-parser');
 var todoController = require('./controllers/todoController');
 
 var app = express();
@@ -14,4 +15,4 @@ todoController(app);
 
 //port listen
 app.listen(3000);
-console.log("Server started... \n listening to port 3000");
+console.log("Server started... \nlistening to port 3000");

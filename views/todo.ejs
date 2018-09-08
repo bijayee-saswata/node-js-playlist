@@ -4,20 +4,24 @@
     <meta charset="utf-8">
     <title>Todo List</title>
     <link rel="stylesheet" href="/assets/styles.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/todo-list.js"></script>
   </head>
   <body>
     <h1>My Todo List</h1>
     <div id="todo-table">
-      <form method="post">
+      <form>
         <input type="text" name="item" placeholder="Add item">
         <button type="submit">Add</button>
       </form>
       <ul>
-        <li>Item 1</li>
-        <li>Item 2</li>
-        <li>Item 3</li>
+        <% for(var i=0; i< todos.length; i++) { %>
+          <li><%= todos[i].item %></li>
+        <% } %>
       </ul>
 
     </div>
+
   </body>
 </html>
